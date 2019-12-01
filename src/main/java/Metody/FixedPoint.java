@@ -32,13 +32,13 @@ public class FixedPoint {
             for (double M = 0; M < 2 * Math.PI; M += 0.01) {
                 int iter = 0;
                 double xn_n = 0;
-                double xn_o = Math.PI;
-                double blad_ea=0;
+                double xn_o = 0;
+                double blad_ea= 0;
 
                 while (iter < maxIter) {
                     iter++;
                     xn_o = xn_n;
-                    xn_n = M+e*Math.sin(xn_o);
+                    xn_n = M+e*Math.sin(xn_n);
 
 
                     blad_ea = (xn_n - xn_o) / xn_n * 100;
